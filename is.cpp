@@ -13,14 +13,14 @@ using namespace std;
                 second = num;
             } else {
                 return true;
-            }
+            }  
         }
 
         return false;
     }
 
 int main() {
-    vector<int> arr = {12, 11, 8, 9, 10};
+    vector<int> arr = {12, 11, 10, 1, 3, 5};
 
     if (increasingTriplet(arr)) {
         cout << "The array has an increasing triplet." << endl;
