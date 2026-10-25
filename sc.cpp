@@ -22,7 +22,7 @@ int compress(vector<char>& chars) {
             chars[idx++] = ch;
             string str = to_string(count);
             for (char dig : str) {
-                chars[idx++] = dig;
+                chars[idx++] = dig; 
             }
         }
         i--; // Adjust i since the outer loop will increment it

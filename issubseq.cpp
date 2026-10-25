@@ -17,7 +17,7 @@ bool isSubsequence(string s, string t) {
 }
 
 int main(){
-    string s = "axc";
+    string s = "adc";
     string t = "ahbgdc";
 
     if (isSubsequence(s, t)) {
