@@ -20,7 +20,7 @@ using namespace std;
     }
 
 int main() {
-    vector<int> arr = {12, 11, 10, 9, 8};
+    vector<int> arr = {12, 11, 8, 9, 10};
 
     if (increasingTriplet(arr)) {
         cout << "The array has an increasing triplet." << endl;
