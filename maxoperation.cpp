@@ -4,13 +4,13 @@ using namespace std;
 
 
 vector<int> sort(vector<int>& nums) {
-    int n = nums.size();
-    for (int i = 0; i < n - 1; i++) {
-        for (int j = 0; j < n - i - 1; j++) {
-            if (nums[j] > nums[j + 1]) {
-                swap(nums[j], nums[j + 1]);
-            }
-        }
+    int left = 0, right  = nums.size() - 1, temp = 0;
+    while (left < right){
+        temp = nums[left];
+        nums[left] = nums [right];
+        nums[right] = temp;
+        left++;
+        right--;
     }
     return nums;
 }
@@ -36,10 +36,14 @@ int maxOperations(vector<int>& nums, int k) {
 }
 
 int main() {
-    vector<int> nums = {1, 2, 3, 4};
+    vector<int> nums = {4, 3, 2, 1};
     int k = 5;
 
-    sort(nums);
+    vector<int> sorted = sort(nums);
+    for (int num : sorted){
+        cout << num<<" ";
+    }
+    cout << endl;
     int result = maxOperations(nums, k);
 
     cout << "Maximum number of operations: " << result << endl;

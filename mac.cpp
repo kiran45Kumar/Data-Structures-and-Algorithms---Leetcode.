@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 
-vector<int> longest(vector<int>& nums, int k){
+vector<int> longest(vector<int>& nums){
     int current_count = 0;
     int max_count = 0;
 
@@ -19,9 +19,9 @@ vector<int> longest(vector<int>& nums, int k){
 
 int main() {
     vector<int> nums = {1, 1, 0, 1, 1, 1, 0, 1};
-    int k = 2;
+  //  int k = 2;
 
-    vector<int> result = longest(nums, k);
+    vector<int> result = longest(nums);
     cout << "The maximum number of consecutive 1's in the array is: " << result[0] << endl;
 
     return 0;
