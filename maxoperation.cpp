@@ -6,8 +6,8 @@ using namespace std;
 vector<int> sort(vector<int>& nums) {
     int left = 0, right  = nums.size() - 1, temp = 0;
     while (left < right){
-        temp = nums[left];
-        nums[left] = nums [right];
+        temp = nums[left]-nums[right];
+        nums[left] = nums[left] - nums[right];
         nums[right] = temp;
         left++;
         right--;
