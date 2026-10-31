@@ -9,7 +9,7 @@ int longest(vector<int>& nums, int k){
     int zeroCount = 0;
     
     while(right < nums.size()){
-        if(nums[right]==0){
+        if(nums[right] == 0){
             zeroCount++;
         }
         if (zeroCount > k){
