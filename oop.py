@@ -220,12 +220,13 @@ class Library:
                             "book_id": bookid,
                             "title": title,
                             "author": author,
-                            "status": "Available"
+                            "status": "Borrowed"
                       }
                 #   else:
                 #       return {
                 #           "status":"UnAvailable"
                 #       }
+          return {"status": "Unavailable"}    
     def borrow_book(self, bookid):
         if bookid in self.borrowed_books:
             print("Book is already borrowed")
@@ -242,6 +243,8 @@ class Library:
             return book
         elif bookid not in self.borrowed_books:
             print("Book is not borrowed from the library or doesn't exist")
+    def list_borrowed_books(self):
+        return self.borrowed_books.copy()
     def display_books(self):
         print("Books", self.books)
     
@@ -256,13 +259,6 @@ library.display_books()
 library.borrow_book(101)
 library.display_books()
 
-
-# Try borrowing the same book again
-library.borrow_book(101)
-
-# Try borrowing a non-existing book
-library.borrow_book(999)
-
 print("Borrowed books:", library.borrowed_books)
 
 
@@ -273,3 +269,4 @@ print("Borrowed:", library.borrowed_books)
 
 print(library.search_book("Python Basics"))
 # print(library.search_book("Clean"))
+print(library.list_borrowed_books())

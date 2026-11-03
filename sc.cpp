@@ -21,7 +21,7 @@ int compress(vector<char>& chars) {
         } else {
             chars[idx++] = ch;
             string str = to_string(count);
-            for (char dig : str) {
+            for (char dig : str) { 
                 chars[idx++] = dig; 
             }
         }
