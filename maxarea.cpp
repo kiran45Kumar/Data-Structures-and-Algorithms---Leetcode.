@@ -9,8 +9,8 @@ int maxArea(vector<int>& height) {
 
     while (left < right) {
         int width = right - left;
-        int maxHeight = min(height[left], height[right]);   
-        int current_area = maxHeight * width;
+        int minheight = min(height[left], height[right]);   
+        int current_area = minheight * width;
         max_area = max(max_area, current_area);
 
         if (height[left] < height[right]) {
