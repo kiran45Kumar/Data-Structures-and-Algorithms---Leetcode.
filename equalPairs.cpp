@@ -15,14 +15,26 @@ public:
         for (int i = 0; i < n; i++) {
             mp[grid[i]]++;
         }
-
+        cout << "Row map: " << endl;
+        for (const auto& pair : mp) {
+            cout << "[";
+            for (const auto& val : pair.first) {
+                cout << val << " ";
+            }
+            cout << "] : " << pair.second << endl;
+        }
         // Step 2: Construct each column
         for (int j = 0; j < n; j++) {
             vector<int> col;
-
+            cout << "Column " << j << ": ";
             for (int i = 0; i < n; i++) {
                 col.push_back(grid[i][j]);
             }
+            cout << "[";
+            for (const auto& val : col) {
+                cout << val << " ";
+            }
+            cout << "]" << endl;
 
             // Step 3: Check if column exists
             if (mp.find(col) != mp.end()) {
