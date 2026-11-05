@@ -29,12 +29,12 @@ bool IsvalidPalindrome(string s)
             right--;
         }
     }
-    return -1;
+    return true;
 }
 
 int main()
 {
-    string s = "A man, a plan, a canal: Panama";
+    string s = "racecar";
     bool isValid = IsvalidPalindrome(s);
     if (isValid)
     {

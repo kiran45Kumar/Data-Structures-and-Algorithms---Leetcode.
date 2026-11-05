@@ -2,31 +2,29 @@
 #include <vector>
 using namespace std;
 
-vector<int> removeElements(vector<int>& nums) {
+int removeElements(vector<int>& nums) {
     if (nums.empty()) return {};
 
     vector<int> result;    
     int i = 0;
-    
-    result.push_back(nums[i]);
 
     for (int j = 1; j < nums.size(); j++) {
         if (nums[j] != nums[i]) {
-            i = j; 
-            result.push_back(nums[i]); 
+            i++;
+            nums[i] = nums[j];
         }
     }
     
-    return result;
+    return i + 1;
 }
 
 
 int main(){
     vector<int>  nums = {1, 1, 2, 2, 3};
-    vector<int> result = removeElements(nums);
+    int result = removeElements(nums);
 
-    for (int num : result){
-        cout<<num;
+    for (int i = 0; i < result; i++) {
+        cout << nums[i] << " ";
     }
     return 0;
 }
