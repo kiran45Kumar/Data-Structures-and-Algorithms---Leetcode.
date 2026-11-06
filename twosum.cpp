@@ -25,7 +25,9 @@ int main() {
     vector<int> result = twoSum(nums, target);
     if (!result.empty()) {
         cout << "Indices of the two numbers that add up to " << target << ": ";
-        cout << result[0] << ", " << result[1] << endl;
+        for (int index : result) {
+            cout << index << " ";
+        }
     } else {
         cout << "No solution found." << endl;
     }
