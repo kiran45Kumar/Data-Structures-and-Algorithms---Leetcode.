@@ -6,6 +6,10 @@ using namespace std;
 
 vector<vector<int>> threeSum(vector<int>& nums){
     sort(nums.begin(), nums.end());
+    cout << "Sorted array: ";
+    for(int num : nums){
+        cout << num << " ";
+    }
     vector<vector<int>> result;
     for(int i = 0; i < nums.size() - 2; i++){
         if(i > 0 && nums[i] == nums[i-1]) continue;
@@ -25,4 +29,21 @@ vector<vector<int>> threeSum(vector<int>& nums){
         }
     }
     return result;
+}
+
+int main() {
+    vector<int> nums = {-1, 0, 1, 2, -1, -4};
+    vector<vector<int>> result = threeSum(nums);
+
+    cout << "Unique triplets that sum to zero:" << endl;
+    for (const auto& triplet : result) {
+        cout << "[";
+        for (size_t i = 0; i < triplet.size(); i++) {
+            cout << triplet[i];
+            if (i < triplet.size() - 1) cout << ", ";
+        }
+        cout << "]" << endl;
+    }
+
+    return 0;
 }
