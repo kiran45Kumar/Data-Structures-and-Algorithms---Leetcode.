@@ -21,7 +21,6 @@ int longest(vector<int>& nums, int k){
 
         if (zeroCount <= k){
             maxLength = max(maxLength, right - left + 1);
-           
         }
         right++;
 

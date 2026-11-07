@@ -3,9 +3,8 @@
 using namespace std;
 
 int removeElements(vector<int>& nums) {
-    if (nums.empty()) return {};
+    if (nums.empty()) return 0;
 
-    vector<int> result;    
     int i = 0;
 
     for (int j = 1; j < nums.size(); j++) {

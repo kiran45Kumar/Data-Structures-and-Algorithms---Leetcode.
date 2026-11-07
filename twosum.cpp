@@ -28,6 +28,7 @@ int main() {
         for (int index : result) {
             cout << index << " ";
         }
+        cout << endl;
     } else {
         cout << "No solution found." << endl;
     }
