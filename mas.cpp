@@ -17,6 +17,7 @@ public:
             current_sum = current_sum+nums[i] - nums[i - k];
             if (current_sum > max_sum){
                 max_sum = current_sum; 
+                cout<<max_sum<<endl;
             }
         }
 
