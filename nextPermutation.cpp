@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 using namespace std;
 
 vector<int> nextPermutation(vector<int>& nums){
@@ -16,4 +17,17 @@ vector<int> nextPermutation(vector<int>& nums){
         }
         swap(nums[right], nums[left]);
     }
+    reverse(nums.begin() + right + 1, nums.end());
+
+    return nums;
+}
+
+int main(){
+    vector<int> nums = {1, 2, 3};
+    nextPermutation(nums);
+    for(int num : nums) {
+        cout << num << " ";
+    }
+    cout << endl;
+    return 0;
 }
